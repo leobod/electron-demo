@@ -1,12 +1,23 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('node:path')
 
+let win = {
+    mainWindow: null,
+    subWindow: null
+}
+
 function createWindow() {
-    const mainWindow = new BrowserWindow({
+    win.mainWindow = new BrowserWindow({
         webPreferences: {
             preload: path.join(__dirname, './render/preload.js')
         }
     })
+
+    /* 多窗口管理 */
+    // win.subWindow = new BrowserWindow({
+    //     width: 800,
+    //     height: 600
+    // })
 
     ipcMain.on('set-title', (event, title) => {
         const webContents = event.sender
@@ -14,7 +25,10 @@ function createWindow() {
         win.setTitle(title)
     })
 
-    mainWindow.loadFile('./web/index.html')
+    win.mainWindow.loadFile('./web/index.html')
+
+    // win.subWindow.loadURL('http://192.168.1.188:9993/')
+
 }
 
 app.whenReady().then(() => {
