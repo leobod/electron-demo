@@ -1,0 +1,22 @@
+{
+  "name": "electron-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.js",
+  "scripts": {
+    "dev:LoadHtmlFile": "nodemon --exec electron ./src/loadHtmlFile/index.js",
+    "dev:LoadRemoteUrl": "nodemon --exec electron ./src/loadRemoteUrl/index.js",
+    "dev:RegisterProtocolLocal": "nodemon --exec electron ./src/registerProtocolLocal/index.js",
+    "dev:BrowserView": "nodemon --exec electron ./src/browserView/index.js",
+    "dev:HiddenTitleBar": "nodemon --exec electron ./src/hiddenTitleBar/index.js",
+    "dev:ContextBridge": "nodemon --exec electron ./src/contextBridge/index.js",
+    "dev:IpcDemo": "nodemon --exec electron ./src/ipcDemo/index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^27.1.2",
+    "nodemon": "^3.0.1"
+  }
+}
