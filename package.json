@@ -10,7 +10,10 @@
     "dev:BrowserView": "nodemon --exec electron ./src/browserView/index.js",
     "dev:HiddenTitleBar": "nodemon --exec electron ./src/hiddenTitleBar/index.js",
     "dev:ContextBridge": "nodemon --exec electron ./src/contextBridge/index.js",
-    "dev:IpcDemo": "nodemon --exec electron ./src/ipcDemo/index.js"
+    "dev:IpcDemo": "nodemon --exec electron ./src/ipcDemo/index.js",
+    "dev:CustomFrame": "nodemon --exec electron ./src/customFrame/index.js",
+    "dev:ProgressBar": "nodemon --exec electron ./src/progressBar/index.js",
+    "dev:TrayDemo": "nodemon --exec electron ./src/trayDemo/index.js"
   },
   "author": "",
   "license": "MIT",

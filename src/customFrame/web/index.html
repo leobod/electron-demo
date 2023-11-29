@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./app.js"></script>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; data:; script-src:'self'; 
+  style-src:'self'; 'unsafe-inline';"> -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' 'unsafe-inline'; img-src 'self'; "
+    />
+  </head>
+
+  <body>
+    TEST Page
+
+    <div>
+      <div
+        class="my-drag"
+        style="
+          -webkit-app-region: drag;
+          width: 300px;
+          height: 30px;
+          background-color: black;
+        "
+      ></div>
+      <section style="-webkit-app-region: no-drag">
+        <button type="button" class="my-btn-max" @click="maxbt">max</button>
+        <button type="button" class="my-btn-min" @click="minbt">min</button>
+        <button type="button" class="my-btn-close" @click="closebt">
+          close
+        </button>
+      </section>
+    </div>
+
+    <!-- 窗口的右上角三个操作按钮 -->
+  </body>
+</html>
